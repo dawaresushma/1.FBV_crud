@@ -1,0 +1,16 @@
+{% extends 'fapp/base.html' %}
+
+{% load crispy_forms_tags %}
+  {% block first %}
+   <title>Add Laptop page</title>
+  {% endblock %}
+
+{% block second %}
+<div class="container" class="form-check">
+  <form method="post" style="width:50%">
+  {% csrf_token %}
+  {{form|crispy}}
+  <input type="submit" value="Add laptop" class="btn btn-primary">
+</form></div>
+
+{% endblock %}
